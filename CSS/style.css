@@ -1,0 +1,201 @@
+Including the font  */
+
+
+@font-face{
+	font-family: firstFont;
+	src: url('Font/SF-Pro-Text-Heavy.otf');
+}
+
+@font-face{
+	font-family: secondfFont;
+	src: url('Font/SF-Pro-Text-Light.otf');
+}
+
+@font-face{
+	font-family: thirdFont;
+	src: url('Font/SF-Pro-Text-Semibold.otf');
+}
+
+body{
+	margin: 0px;
+	padding: 0px;
+	background: url('../Images/FerrariBackground.jpg') no-repeat;
+	background-size: 100% 100%;
+
+}
+
+/* Styling Header */
+header{
+	width: 100%;
+	display: inline-block;	
+	white-space: nowrap;
+	padding-top: 2%;
+}
+
+/* Styling Header Logo Text */
+#logo-text{
+	width: 25%;
+	display: inline-block;
+	font-family: firstFont;
+	padding-left: 3%;
+	font-size: 25pt;
+	color:  #B6B6B6;
+}
+
+#logo-text-content{
+	border-bottom: 4px solid yellow;
+
+}
+
+/* Styling Nav bars */
+
+nav{
+	width: 65%;
+	display: inline-block;
+}
+
+nav ul{
+	width: 100%;
+	display: inline-block;
+}
+
+nav ul li{
+	display: inline-block;
+	width: 18.75%;
+}
+
+#extra-width{
+	width: 25%;
+}
+
+nav ul li a{
+	text-decoration: none;
+	color: #FFF;
+	font-family: secondfFont;
+	font-size: 16pt;
+}
+
+/* Hamburger menu */
+
+#menu{
+	display: none;
+}
+
+/* Scrollable Menu */
+#scroll-menu {
+	margin-top: 2%;
+	background-color: #171717;
+  	overflow: auto;
+  	white-space: nowrap;
+  	display: none;
+  	text-align: center;
+  	font-family: secondFont;
+}
+
+#scroll-menu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+#scroll-menu a:hover{
+	font-family: thirdFont;
+	font-size: 14pt;	
+}
+
+/* Styling Aside Bars */
+
+aside{
+	width: 10%;
+	height: 618px;
+}
+
+aside ul{
+	list-style-type: none;
+}
+
+aside ul li {
+	height: 140px;
+	writing-mode: vertical-rl;
+	transform: rotate(180deg);
+}
+
+aside ul li a{
+	color: white;
+	text-decoration: none;
+	font-size: 16pt;
+	font-family: thirdFont;
+}
+
+.border-right-red{
+	padding-left: 15px;
+	border-left: 6px solid red; 
+}
+
+.border-right-yellow{
+	padding-left: 15px;
+	border-left: 6px solid yellow; 
+}
+
+/* Hoving effect on nav bars */
+
+nav ul li a:hover{
+	font-family: thirdFont; /* I have just change font size any futher change can be added as per requirement*/
+	color: #E0DCDD;
+}
+
+/* Responsive aspect of website */
+
+/* Controling font size of nav on max-width 1054px */
+
+@media screen and (max-width: 1054px){
+	nav ul li a{
+		font-size: 14pt;
+	}
+}
+
+/* Hemburger menu display  */
+@media screen and (max-width: 942px){
+	#menu{
+		display: inline-block;
+		width: 65%;
+		text-align: right;
+	}
+
+	#menu img{
+		width: 6%;
+	}
+	nav{
+		display: none;
+	}
+	aside ul{
+		padding-inline-start: 20px;		
+	}
+	
+}
+
+/* Adjusting element when max-width is 550px */
+@media screen and (max-width: 550px){
+	#menu img{
+		width: 10%;
+	}
+	aside{
+		height: 650px;
+	}
+	aside ul{
+		padding-inline-start: 10px;
+	}
+	aside ul li{
+		height: 150px;
+	}
+	body{
+		background: url('../Images/FerrariBackground-mobile.jpg') no-repeat;
+		background-size: 100% 100%;		
+
+	}
+}
+
+
+
+
